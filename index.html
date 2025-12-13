@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inglês no Ambiente de Trabalho | E-book Bordfer</title>
+  <meta name="description" content="Domine reuniões, e-mails e entrevistas em inglês no ambiente de trabalho com o e-book prático da Bordfer.">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17795068219"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17795068219');
+  </script>
+
+  <style>
+    :root{
+      --purple:#B289FF;
+      --dark:#292C2F;
+      --yellow:#FFED55;
+
+      --text:#111827;
+      --soft:#4b5563;
+      --border:#e5e7eb;
+
+      --max:1120px;
+      --r-lg:18px;
+      --r-md:12px;
+      --shadow:0 16px 40px rgba(15, 23, 42, 0.18);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+    body{background:#fff;color:var(--text);line-height:1.6;}
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;display:block;}
+
+    .section{width:100%;}
+    .inner{max-width:var(--max);margin:0 auto;padding:44px 16px;}
+    .inner.tight{padding:28px 16px;}
+
+    /* Header */
+    header{background:#fff;border-bottom:1px solid var(--border);}
+    .header-inner{max-width:var(--max);margin:0 auto;padding:16px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .logo-wrap{display:flex;align-items:center;gap:12px;}
+    .logo-wrap img{height:56px;width:auto;} /* AUMENTADO */
+    .logo-wrap span{font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:13px;color:var(--dark);}
+    .header-badge{font-size:12px;padding:6px 12px;border-radius:999px;background:#f4f4f5;color:var(--soft);font-weight:700;text-transform:uppercase;letter-spacing:.06em;}
+
+    /* Common titles */
+    .title{font-size:22px;font-weight:800;color:var(--dark);margin-bottom:10px;}
+    .sub{font-size:14px;color:var(--soft);margin-bottom:18px;max-width:760px;}
+    .p{font-size:14px;color:var(--soft);margin-bottom:10px;}
+
+    /* HERO (branco) */
+    .hero{background:#fff;}
+    .hero-grid{display:grid;grid-template-columns:minmax(0, 3fr) minmax(0, 2.2fr);gap:34px;align-items:center;}
+    @media (max-width: 900px){.hero-grid{grid-template-columns:1fr;}}
+    .hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;padding:5px 12px;border-radius:999px;background:rgba(178,137,255,.18);color:#3b2a63;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;}
+    .hero-h1{font-size:34px;line-height:1.12;margin-bottom:10px;color:var(--dark);font-weight:900;}
+    .hero-h1 span{display:block;color:#3b2a63;}
+    .hero-sub{font-size:15px;color:var(--soft);margin-bottom:18px;max-width:620px;}
+    .hero-list{list-style:none;font-size:14px;color:var(--soft);margin-bottom:18px;}
+    .hero-list li{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px;}
+    .hero-list li .icon{font-size:17px;margin-top:1px;color:#16a34a;}
+    .hero-price{margin-bottom:18px;}
+    .hero-price-label{font-size:13px;color:#6b7280;margin-bottom:4px;}
+    .hero-price-main{font-size:26px;font-weight:900;color:var(--dark);}
+    .hero-price-main .old{font-size:15px;color:#9ca3af;text-decoration:line-through;margin-right:10px;font-weight:700;}
+
+    .cta{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 28px;border-radius:999px;
+      background:var(--yellow);color:#111;
+      font-weight:900;font-size:15px;letter-spacing:.08em;text-transform:uppercase;
+      box-shadow:0 12px 28px rgba(0,0,0,.18);
+      transition:transform .12s ease, filter .12s ease, box-shadow .12s ease;
+    }
+    .cta:hover{transform:translateY(-1px);filter:brightness(1.02);box-shadow:0 18px 38px rgba(0,0,0,.22);}
+    .cta-sub{font-size:12px;color:#6b7280;margin-top:10px;font-weight:700;}
+
+    /* Ajuste: container da capa sem padding e imagem menor */
+    .cover-box{
+      background:#fff;
+      border-radius:var(--r-lg);
+      
+      overflow:hidden;
+      
+      padding:0; /* padding 0 */
+    }
+    .cover-box img{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:contain;
+      max-height:500px; /* DIMINUI a capa no container */
+    }
+
+    /* SOBRE O CONTEÚDO (roxo) */
+    .about{background:var(--purple);}
+    .about .title{color:#111;}
+    .about .sub, .about .p{color:#1f1f1f;opacity:.92;}
+    .cols-2{display:grid;grid-template-columns:minmax(0, 1.35fr) minmax(0, 2fr);gap:32px;align-items:center;}
+    @media (max-width: 900px){.cols-2{grid-template-columns:1fr;}}
+    .sumario-frame{
+      border-radius:var(--r-lg);
+      background:rgba(255,255,255,.45);
+      border:1px solid rgba(0,0,0,.12);
+      box-shadow:var(--shadow);
+    }
+
+    /* Conheça (branco) */
+    .author{background:#fff;}
+    .author-card{
+      border-radius:var(--r-lg);
+      border:1px solid var(--border);
+      background:#fff;
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    .author-logo{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;}
+    .author-logo img{max-width:300px;}
+    .author-logo .mini{font-size:13px;color:#6b7280;font-weight:700;}
+
+    /* Seção escura com CTA e frase (como imagem 1) */
+    .dark-cta{background:var(--dark);color:#fff;}
+    .dark-row{
+      display:flex;align-items:center;justify-content:center;
+      gap:34px;flex-wrap:wrap;
+    }
+    .dark-row .cta{box-shadow:none;}
+    .dark-row .right-text{
+      font-size:20px;
+      letter-spacing:.02em;
+      text-transform:uppercase;
+      color:#fff;
+      opacity:.95;
+      font-weight:500;
+    }
+    @media (max-width: 700px){
+      .dark-row .right-text{font-size:16px;text-align:center;}
+    }
+
+    /* Garantia (branco) como imagem 2 */
+    .guarantee{background:#fff;}
+    .guarantee-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) minmax(0, 1.4fr);
+      gap:28px;align-items:center;
+    }
+    @media (max-width: 900px){.guarantee-grid{grid-template-columns:1fr;}}
+    .badge-img{
+      display:flex;justify-content:center;align-items:center;
+    }
+    .badge-img img{
+      max-width:140px;
+      width:100%;
+      height:auto;
+    }
+    .g-title{
+      font-size:34px;
+      color:var(--dark);
+      font-weight:500;
+      margin-bottom:10px;
+    }
+    .g-title strong{font-weight:900;}
+    .g-text{
+      font-size:18px;
+      color:#4b5563;
+      max-width:520px;
+    }
+    .g-text strong{color:#111;}
+
+    /* Seção roxa com quadrado preto (como imagem 3) */
+    .purple-card{background:var(--purple);}
+    .price-card{
+      width:min(520px, 100%);
+      margin:0 auto;
+      background:var(--dark);
+      border-radius:0; /* quadrado */
+      padding:34px 26px;
+      text-align:center;
+      box-shadow:var(--shadow);
+      color:#fff;
+    }
+    .device-icon{
+      width:56px;height:56px;border:2px solid rgba(255,255,255,.7);
+      border-radius:999px;
+      margin:0 auto 14px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:24px;
+      opacity:.95;
+    }
+    .card-top{
+      font-size:22px;
+      font-weight:500;
+      margin-bottom:18px;
+    }
+    .divider{
+      height:1px;background:rgba(255,255,255,.55);
+      width:70%;margin:18px auto 22px;
+    }
+    .only{
+      letter-spacing:.06em;
+      opacity:.9;
+      font-size:18px;
+      margin-bottom:8px;
+    }
+    .big-price{
+      font-size:72px;
+      line-height:1;
+      font-weight:900;
+      margin-bottom:18px;
+    }
+    .subline{
+      font-size:12px;
+      opacity:.9;
+      margin-top:10px;
+      letter-spacing:.04em;
+      font-weight:700;
+      text-transform:uppercase;
+    }
+
+    /* FAQ (mantém como estava) */
+    .faq{background:#fff;}
+    .faq-list{margin-top:14px;}
+    .faq-item{border-radius:var(--r-md);border:1px solid var(--border);padding:12px 14px;margin-bottom:10px;background:#f9fafb;}
+    .faq-q{font-weight:800;font-size:14px;margin-bottom:4px;color:var(--text);}
+    .faq-a{font-size:13px;color:var(--soft);}
+
+    /* Footer */
+    footer{background:#fff;border-top:1px solid var(--border);}
+    .footer-inner{max-width:var(--max);margin:0 auto;padding:16px;font-size:12px;color:#9ca3af;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <img src="logo-bordfer.png" alt="Logo Bordfer" />
+        <span>BORDFER</span>
+      </div>
+      <div class="header-badge">E-book digital · acesso imediato</div>
+    </div>
+  </header>
+
+  <!-- HERO (BRANCO) -->
+  <section class="section hero">
+    <div class="inner">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-tag">Inglês para carreira</div>
+          <h1 class="hero-h1">
+            Inglês para o Trabalho:
+            <span>domine reuniões, e-mails e entrevistas com segurança</span>
+          </h1>
+
+          <p class="hero-sub">
+            Guia prático feito para profissionais brasileiros que precisam se comunicar
+            em inglês no dia a dia do trabalho, sem enrolação e com exemplos reais.
+          </p>
+
+          <ul class="hero-list">
+            <li><span class="icon">✔</span> Frases prontas para usar em reuniões, calls e apresentações.</li>
+            <li><span class="icon">✔</span> Modelos de e-mails profissionais para diferentes situações.</li>
+            <li><span class="icon">✔</span> Vocabulário essencial para entrevistas e conversas corporativas.</li>
+          </ul>
+
+          <div class="hero-price">
+            <div class="hero-price-label">Oferta especial de lançamento</div>
+            <div class="hero-price-main">
+              <span class="old">R$ 39,90</span>
+              R$ 19,90
+            </div>
+          </div>
+
+          <a class="cta" href="https://pay.hotmart.com/G103263788W?off=9fcsziah" target="_blank" rel="noopener noreferrer">
+            Comprar agora
+          </a>
+          <div class="cta-sub">
+            Pagamento 100% seguro pela Hotmart · acesso imediato ao e-book.
+          </div>
+        </div>
+
+        <div class="cover-box">
+          <img src="capa-ebook.png" alt="Capa do ebook Inglês no ambiente de trabalho" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE O CONTEÚDO (ROXO) -->
+  <section class="section about" id="conteudo">
+    <div class="inner">
+      
+
+      <div class="cols-2">
+        <div>
+	  <h2 class="title">Sobre o conteúdo</h2>
+      <p class="sub">
+        O e-book foi pensado para quem já sabe o básico de inglês, mas trava na hora de usar
+        o idioma em contexto profissional: reuniões, e-mails, entrevistas, feedbacks e conversas
+        rápidas com chefes e clientes.
+      </p>
+          <p class="p">
+            Você vai aprender a organizar suas ideias em inglês, usar expressões naturais e
+            ganhar segurança para participar ativamente das conversas, em vez de só ouvir.
+          </p>
+          <p class="p">
+            O conteúdo é dividido em seções como fundamentos do inglês profissional,
+            vocabulário por área, comunicação escrita, reuniões, entrevistas e situações
+            do dia a dia no trabalho.
+          </p>
+          <p class="p">
+            Além disso, há uma parte prática com exercícios, estudos de caso e modelos
+            prontos (e-mails, roteiros de reunião, respostas de entrevista, glossário e mais)
+            para você adaptar à sua rotina.
+          </p>
+        </div>
+
+        <div class="sumario-frame">
+          <img src="sumario-ebook.png" alt="Estrutura do e-book Inglês no Ambiente de Trabalho" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONHEÇA MELHOR (BRANCO) -->
+  <section class="section author" id="autor">
+    <div class="inner">
+      <h2 class="title">Conheça melhor quem criou o conteúdo</h2>
+      <div class="cols-2">
+        <div class="author-card">
+          <p class="p">
+            A <strong>Bordfer</strong> é uma empresa focada em transformar conhecimento em
+            materiais práticos, diretos e aplicáveis. A ideia é fugir do inglês genérico e
+            entregar exatamente o que você precisa para se virar no ambiente de trabalho.
+          </p>
+          <p class="p">
+            Os conteúdos são projetados para resolver problemas reais do dia a dia profissional:
+            participar de reuniões, escrever e-mails claros, responder entrevistas e se
+            comunicar com segurança em contextos corporativos.
+          </p>
+          <p class="p">
+            Nosso compromisso é criar e-books que você realmente usa — com linguagem simples,
+            exemplos concretos e foco total em resultado.
+          </p>
+        </div>
+
+        <div class="author-logo">
+          <img src="logo-bordfer.png" alt="Logo Bordfer" />
+          <div class="mini">Bordfer · Conteúdo digital para acelerar sua evolução profissional.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO ESCURA CTA (como imagem 1) -->
+  <section class="section dark-cta">
+    <div class="inner tight">
+      <div class="dark-row">
+        <a class="cta" href="https://pay.hotmart.com/G103263788W?off=9fcsziah" target="_blank" rel="noopener noreferrer">
+          Comprar agora
+        </a>
+        <div class="right-text">ESTA OFERTA PODE TERMINAR EM BREVE.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA (branco) com imagem e texto ao lado -->
+  <section class="section guarantee">
+    <div class="inner">
+      <div class="guarantee-grid">
+        <div class="badge-img">
+          <img src="garantia-hotmart.png" alt="Garantia Hotmart" />
+        </div>
+
+        <div>
+          <div class="g-title">Garantia de <strong>7 dias</strong></div>
+          <div class="g-text">
+            Seu dinheiro de volta <strong>sem perguntas</strong> até<br/>
+            <strong>7 dias</strong> após a compra.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROXO + QUADRADO PRETO (como imagem 3) -->
+  <section class="section purple-card">
+    <div class="inner">
+      <div class="price-card">
+        <div class="device-icon">⌁</div>
+        <div class="card-top">Aproveite o conteúdo em<br/>qualquer dispositivo.</div>
+
+        <div class="divider"></div>
+
+        <div class="only">POR APENAS</div>
+        <div class="big-price">R$ 19,90</div>
+
+        <a class="cta" href="https://pay.hotmart.com/G103263788W?off=9fcsziah" target="_blank" rel="noopener noreferrer">
+          Comprar agora
+        </a>
+
+        <div class="subline">Pagamento 100% seguro com acesso imediato</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (como está) -->
+  <section class="section faq" id="perguntas">
+    <div class="inner">
+      <h2 class="title">Perguntas frequentes</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Para quem é esse e-book?</div>
+          <div class="faq-a">
+            Para profissionais brasileiros que já sabem um pouco de inglês, mas travam na hora de
+            usar o idioma no trabalho: reuniões, e-mails, entrevistas, calls com clientes e chefes.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Como funciona o prazo de garantia?</div>
+          <div class="faq-a">
+            Você tem 7 dias para testar o conteúdo com calma. Se achar que não é para você,
+            basta pedir o reembolso dentro desse período e o valor é devolvido.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Como vou acessar o e-book?</div>
+          <div class="faq-a">
+            Após a compra, você recebe um e-mail da Hotmart com o acesso. Depois, pode entrar
+            em “Minhas compras” na plataforma e abrir o e-book sempre que quiser.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Preciso ser avançado em inglês?</div>
+          <div class="faq-a">
+            Não. O material foi pensado para quem tem noção básica/intermediária e quer
+            aprender exatamente o que precisa para se comunicar com mais confiança no ambiente de trabalho.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (como está) -->
+  <footer>
+    <div class="footer-inner">
+      <div>Copyright © Bordfer · Todos os direitos reservados.</div>
+      <div>Pagamento e acesso via Hotmart.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
